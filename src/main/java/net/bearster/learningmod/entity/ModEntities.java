@@ -1,10 +1,7 @@
 package net.bearster.learningmod.entity;
 
 import net.bearster.learningmod.LearningMod;
-import net.bearster.learningmod.entity.custom.CapybaraEntity;
-import net.bearster.learningmod.entity.custom.FireTruckEntity;
-import net.bearster.learningmod.entity.custom.FirefighterEntity;
-import net.bearster.learningmod.entity.custom.GiraffeEntity;
+import net.bearster.learningmod.entity.custom.*;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -31,6 +28,10 @@ public class ModEntities {
     public static final RegistryObject<EntityType<FireTruckEntity>> FIRE_TRUCK =
             ENTITY_TYPES.register("fire_truck", () -> EntityType.Builder.of(FireTruckEntity::new, MobCategory.CREATURE)
                     .sized(0.75f, 0.55f).build("fire_truck"));
+
+    public static final RegistryObject<EntityType<TomahawkProjectileEntity>> TOMAHAWK =
+            ENTITY_TYPES.register("tomahawk", () -> EntityType.Builder.<TomahawkProjectileEntity>of(TomahawkProjectileEntity::new, MobCategory.MISC)
+                    .sized(0.5f, 1.15f).build("tomahawk"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

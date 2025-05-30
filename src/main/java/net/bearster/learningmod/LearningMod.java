@@ -8,10 +8,7 @@ import net.bearster.learningmod.component.ModDataComponentTypes;
 import net.bearster.learningmod.effect.ModEffects;
 import net.bearster.learningmod.enchantment.ModEnchantmentEffects;
 import net.bearster.learningmod.entity.ModEntities;
-import net.bearster.learningmod.entity.client.CapybaraRenderer;
-import net.bearster.learningmod.entity.client.FireTruckRenderer;
-import net.bearster.learningmod.entity.client.FirefighterRenderer;
-import net.bearster.learningmod.entity.client.GiraffeRenderer;
+import net.bearster.learningmod.entity.client.*;
 import net.bearster.learningmod.fluid.ModFluidTypes;
 import net.bearster.learningmod.fluid.ModFluids;
 import net.bearster.learningmod.item.ModCreativeModeTabs;
@@ -55,8 +52,7 @@ import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(LearningMod.MOD_ID)
-public class LearningMod
-{
+public class LearningMod {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "learningmod";
     // Directly reference a slf4j logger
@@ -159,6 +155,8 @@ public class LearningMod
 
             EntityRenderers.register(ModEntities.GIRAFFE.get(), GiraffeRenderer::new);
             EntityRenderers.register(ModEntities.FIRE_TRUCK.get(), FireTruckRenderer::new);
+
+            EntityRenderers.register(ModEntities.TOMAHAWK.get(), TomahawkProjectileRenderer::new);
         }
 
         @SubscribeEvent

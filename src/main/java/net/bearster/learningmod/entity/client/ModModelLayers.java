@@ -16,4 +16,7 @@ public class ModModelLayers {
 
     public static final ModelLayerLocation FIRE_TRUCK = new ModelLayerLocation(
             ResourceLocation.fromNamespaceAndPath(LearningMod.MOD_ID, "fire_truck"), "main");
+
+    public static final ModelLayerLocation TOMAHAWK = new ModelLayerLocation(
+            ResourceLocation.fromNamespaceAndPath(LearningMod.MOD_ID, "tomahawk"), "main");
 }

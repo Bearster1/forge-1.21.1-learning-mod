@@ -128,6 +128,9 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.FIRE_TRUCK, 0xb02e26, 0xd8d8d8,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> TOMAHAWK = ITEMS.register("tomahawk",
+            () -> new TomahawkItem(new Item.Properties().stacksTo(16)));
+
 
 
     public static void register(IEventBus eventBus) {
